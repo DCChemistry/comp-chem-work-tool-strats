@@ -57,6 +57,14 @@ set transparency, 0.5
 set cartoon_transparency, 0.6
 set stick_transparency, 0.4
 
+To assign helices, sheets and loops individual colors, do:
+PYMOL> color red, ss h         # helices
+PYMOL> color yellow, ss s      # sheets
+PYMOL> color green, ss l+''    # loops
+When the colour bleeds from the ends of helices and sheets into loops, do:
+PYMOL> set cartoon_discrete_colors, 1
+Or activate Cartoon -> Discrete Colors in the GUI menu.
+
 To split the structures from a multi-ligand .sdf file (obj is the name of the loaded multi-state object, and the prefix is what you would like the split states to be called):
 split_states obj, prefix=lig
 
