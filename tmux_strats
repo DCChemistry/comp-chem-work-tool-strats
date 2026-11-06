@@ -1,0 +1,14 @@
+# To launch a session, type:
+> tmux
+
+# To detach from a session, press:
+Ctrl+B, D
+
+To reattach to a session, type:
+tmux attach
+
+To kill a session while inside tmux:
+Ctrl+B, :, kill-session
+
+To check active sessions:
+> tmux ls

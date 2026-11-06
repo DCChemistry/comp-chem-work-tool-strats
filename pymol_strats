@@ -1,0 +1,62 @@
+From this very useful YouTube video: https://youtu.be/mBlMI82JRfI?is=uAI_euwbDE5jMKvk
+
+Note: Copy/paste the commands that follow “PyMOL>” 
+
+
+Show sticks of residues within 5 angstroms of your selection (to show binding site residues):
+PYMOL> show sticks, byres all within 5 of SELECTIONNAME
+
+
+If you wanted to make the water molecule smaller, type:
+PyMOL>alter active_water, vdw=0.5
+PyMOL>rebuild
+
+
+Command to create colorblind-friendly images (if you want the background black, change the first line to say “black” instead of “white”): PYMOL>
+bg_color white
+set antialias=1
+set orthoscopic=1
+set gamma=1.15
+set cartoon_fancy_helices, 1
+set cartoon_fancy_sheets, 1
+set_color wred, [0.788,0.000,0.140]
+set_color wblue, [0.31,0.506,0.686]
+set_color wgold, [0.855,0.647,0.125]
+set_color wgreen, [0.134,0.545,0.134]
+set_color wgray, [0.800,0.800,0.800]
+set_color wrose, [0.65,0.47,0.55]
+set_color wpurple, [0.37,0.31,0.62]
+set_color mpurple, [0.75,0.57,0.80]
+set_color mpgrey, [0.73,0.68,0.82]
+set ray_shadows, 0
+set ray_trace_fog, 1
+
+
+To color using the command line (you can also follow the commands below with SELECTIONNAME to apply it to just a particular named selection): PYMOL>
+util.cbag        green
+util.cbac        cyan
+util.cbam        light magenta
+util.cbay        yellow
+util.cbas        salmon
+util.cbaw        white/grey
+util.cbab        slate
+util.cbao        bright orange
+util.cbap        purple
+util.cbak        pink
+
+
+To hide/show non-bonded entities, usually water.
+hide nonbonded
+show nonbonded
+
+
+To set the transparency of different entities (transparency - all surfaces, cartoon_transparency - backbone, stick_transparency - ligand/sidechain). The value following the command is between 0-1: PYMOL>
+set transparency, 0.5
+set cartoon_transparency, 0.6
+set stick_transparency, 0.4
+
+To split the structures from a multi-ligand .sdf file (obj is the name of the loaded multi-state object, and the prefix is what you would like the split states to be called):
+split_states obj, prefix=lig
+
+
+So much more at the PyMOL Wiki!
