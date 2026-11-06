@@ -1,4 +1,6 @@
-From this very useful YouTube video: https://youtu.be/mBlMI82JRfI?is=uAI_euwbDE5jMKvk
+Mostly from this very useful YouTube video: https://youtu.be/mBlMI82JRfI?is=uAI_euwbDE5jMKvk
+
+A note on logging: To save all your commands, when you start working in PyMOL open a log (File → Log). This will record everything you type.
 
 Note: Copy/paste the commands that follow “PyMOL>” 
 
