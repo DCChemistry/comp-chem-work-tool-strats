@@ -14,6 +14,10 @@ PyMOL>alter active_water, vdw=0.5
 PyMOL>rebuild
 
 
+To select only the backbone or only the side chains of an amino acid, the following selections can be used: backbone atoms are ‘name n+c+o+ca’, so sidechain atoms are ‘not
+name n+c+o+ca’
+
+
 Command to create colorblind-friendly images (if you want the background black, change the first line to say “black” instead of “white”): PYMOL>
 bg_color white
 set antialias=1
