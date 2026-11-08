@@ -13,6 +13,10 @@ If you wanted to make the water molecule smaller, type:
 PyMOL>alter active_water, vdw=0.5
 PyMOL>rebuild
 
+To store an orientation for taking a picture, you can use the following command:
+PYMOL> view pocket_view, store
+Then, if you accidentally rotate or zoom away from it, restore it with:
+PYMOL> view pocket_view, recall
 
 To select only the backbone or only the side chains of an amino acid, the following selections can be used: backbone atoms are ‘name n+c+o+ca’, so sidechain atoms are ‘not name n+c+o+ca’
 
