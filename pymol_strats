@@ -13,6 +13,18 @@ If you wanted to make the water molecule smaller, type:
 PyMOL>alter active_water, vdw=0.5
 PyMOL>rebuild
 
+To just keep the side chains of the amino acids in a structure, you can use the cartoon side chain helper. The syntax is shown below:
+PYMOL> set cartoon_side_chain_helper, off            
+PYMOL> set cartoon_side_chain_helper, 0              #off
+
+PYMOL> set cartoon_side_chain_helper, on             
+PYMOL> set cartoon_side_chain_helper, 1              #on
+
+# in PyMOL 2.1, object or selection must be provide
+PYMOL> set cartoon_side_chain_helper, on, polymer
+PYMOL> set cartoon_side_chain_helper, 1, polymer              #on
+
+
 To store an orientation for taking a picture, you can use the following command:
 PYMOL> view pocket_view, store
 Then, if you accidentally rotate or zoom away from it, restore it with:
